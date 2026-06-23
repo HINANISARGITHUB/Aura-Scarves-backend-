@@ -24,5 +24,13 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HINANISARGITHUB/Aura-Scarves-backend-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HINANISARGITHUB/Aura-Scarves-backend-/issues"
+  },
+  "homepage": "https://github.com/HINANISARGITHUB/Aura-Scarves-backend-#readme",
   "description": ""
 }
