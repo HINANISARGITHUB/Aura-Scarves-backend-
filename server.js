@@ -25,6 +25,11 @@ app.use(cors({
 app.use(express.json({ limit: '10mb' }))
 app.use(express.urlencoded({ extended: true, limit: '10mb' }))
 
+// 🚀 Main / Root Route (Taaki main URL par "Route not found" na aaye)
+app.get('/', (req, res) => {
+  res.send("🚀 Aura Scarves Backend is live and running smoothly!")
+})
+
 // Routes
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/styles', require('./routes/styles'))
@@ -37,7 +42,7 @@ app.use('/api/orders', require('./routes/orders'))
 // Health check
 app.get('/api/health', (req, res) => res.json({ status: 'ok', message: 'Aura Scarves API running ✨' }))
 
-// 404
+// 404 (Agar upar wale kisi route se match nahi hoga, tab yeh chalega)
 app.use((req, res) => res.status(404).json({ message: `Route ${req.originalUrl} not found` }))
 
 // Global error handler
