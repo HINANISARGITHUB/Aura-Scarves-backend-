@@ -33,6 +33,7 @@ app.use('/api/reviews', require('./routes/reviews'))
 app.use('/api/cart', require('./routes/cart'))
 app.use('/api/favorites', require('./routes/favorites'))
 app.use('/api/admin', require('./routes/admin'))
+app.use('/api/orders', require('./routes/orders'))
 
 // Health check
 app.get('/api/health', (req, res) => res.json({ status: 'ok', message: 'Aura Scarves API running ✨' }))
