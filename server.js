@@ -44,6 +44,10 @@ app.use((req, res) => res.status(404).json({ message: `Route ${req.originalUrl} 
 // Global error handler
 app.use(globalErrorHandler)
 
-const PORT = process.env.PORT || 5000
-app.listen(PORT, () => console.log(`🚀 Aura Scarves server running on port ${PORT}`))
+// Local development
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 5000
+  app.listen(PORT, () => console.log(`🚀 Aura Scarves server running on port ${PORT}`))
+}
 
+module.exports = app
